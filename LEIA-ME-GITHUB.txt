@@ -1,0 +1,39 @@
+CONECTA SEGURA - REPOSITORIO GITHUB
+
+1. Extraia este ZIP e abra a pasta Conecta-Segura no VS Code.
+2. Crie um repositorio vazio no GitHub (sem README inicial).
+3. No terminal desta pasta, execute:
+
+   git init
+   git add .
+   git commit -m "Versao inicial do Conecta Segura"
+   git branch -M main
+   git remote add origin https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+   git push -u origin main
+
+Substitua SEU-USUARIO e SEU-REPOSITORIO pelos dados do repositorio criado.
+
+EXECUTAR LOCALMENTE
+Instale Node.js 24. A versao gerada do aplicativo ja esta incluida.
+Execute: npm start
+Abra: http://localhost:3000
+Para reconstruir apos alterar src/: npm run build (Windows, Linux ou macOS).
+Para verificar: npm test
+
+INTEGRACOES
+Leia README.md e .env.example. As credenciais reais nao estao incluidas.
+SMS/WhatsApp automaticos, login e mapa integrado dependem de configuracao.
+O modo demonstracao nao envia mensagens automaticamente.
+
+Este ZIP nao inclui historico Git, dados pessoais, banco local ou credenciais.
+A identidade do Site hospedado foi removida da configuracao de exportacao.
+GitHub Pages hospeda apenas arquivos estaticos; o backend deste projeto precisa
+ser executado em hospedagem compativel com Node.js ou Cloudflare Workers.
+
+GITHUB PAGES
+Execute npm run build:pages para gerar dist-pages/.
+Execute npm run preview:pages e abra http://localhost:4173/conecta-segura/.
+O workflow .github/workflows/pages.yml testa e publica dist-pages/ em pushes
+para main. Em Settings > Pages, selecione GitHub Actions como fonte.
+Sem PAGES_API_BASE_URL, a versao publica usa somente demonstracao e recursos locais.
+Leia README.md para conectar um backend externo com autenticacao e CORS restrito.

@@ -1,0 +1,22 @@
+{
+  "name": "conecta-segura",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
+    "build:netlify": "node scripts/build-netlify.mjs",
+    "preview:pages": "node scripts/preview-pages.mjs",
+    "pretest": "node scripts/compile.mjs",
+    "validate": "node scripts/validate-artifact.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "start": "node --env-file-if-exists=.env scripts/local.mjs"
+  },
+  "dependencies": {
+    "@netlify/database": "2.0.3",
+    "pg": "8.23.1"
+  }
+}
